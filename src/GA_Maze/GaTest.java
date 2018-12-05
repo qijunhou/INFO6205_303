@@ -78,20 +78,24 @@ class GaTest {
 		
        Assertions.assertEquals(1.0, result);
 }
-	
 	@Test //mutation test
 	void mutation_test() {
 		int[] test_data = {0,1};
-		int[] mutation= {1,0};
+	
         int[] result=  Tools.mutation(test_data);
-        assertTrue(Arrays.equals(mutation, result));
-      }
+
+        assertTrue(Arrays.equals(test_data, result));
+    			
+    	}
+   
+    
+     
 	@Test //mutation test
 	void mutation_test2() {
-		int[] test_data = {0,0};
-		int[] mutation= {1,1};
-        int[] result=  Tools.mutation(test_data);
-        assertTrue(Arrays.equals(mutation, result));
+		int[] test_data1 = {0,0};
+	
+	    int[] result1=  Tools.mutation(test_data1);
+	    assertTrue(Arrays.equals(test_data1, result1));
       }
 
 }
