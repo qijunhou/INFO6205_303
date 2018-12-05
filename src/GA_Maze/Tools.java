@@ -11,11 +11,16 @@ import java.util.ArrayList;
 
 public class Tools {
  
- public static int[] mutation(int[] point) {
-  point[0] = (point[0] == 0 ? 1 : 0);
-  point[1] = (point[1] == 0 ? 1 : 0);
-  return point;
- }
+public static final int[][] MAZE_DIRECTION_CODE = new int[][] { { 0, 0 },
+		  { 0, 1 }, { 1, 0 }, { 1, 1 }, };
+		 
+		 public static int[] mutation(int[] point) {
+		  Random random = new Random();
+		  int directionCode = random.nextInt(4);
+		  point[0] = MAZE_DIRECTION_CODE[directionCode][0];
+		  point[1] = MAZE_DIRECTION_CODE[directionCode][1];
+		  return point;
+		 }
  
  /**
   * binary array converts to numbers
